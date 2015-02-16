@@ -54,5 +54,13 @@ namespace Crumble
             //Console.WriteLine("Channel ID: {0}, Parent: {1}, Name: {2}, Links: ({3}), Description: {4}, Temporary: {5}, Position: {6}",
             //    Channels[id].Id, Channels[id].Parent, Channels[id].Name, string.Join(",", Channels[id].Links), Channels[id].Description, Channels[id].Temporary, Channels[id].Position);
         }
+
+        private void HandleChannelRemove(Stream s)
+        {
+            var cr = Serializer.Deserialize<ProtoBuf.ChannelRemove>(s);
+
+            if (Channels.ContainsKey((int)cr.channel_id))
+                Channels.Remove((int)cr.channel_id);
+        }
     }
 }

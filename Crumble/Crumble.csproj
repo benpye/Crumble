@@ -43,14 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Channel.cs" />
-    <Compile Include="MumbleClient.ChannelRemove.cs" />
-    <Compile Include="MumbleClient.ChannelState.cs" />
+    <Compile Include="MumbleClient.Channel.cs" />
     <Compile Include="MumbleClient.CryptSetup.cs" />
     <Compile Include="MumbleClient.cs" />
+    <Compile Include="MumbleClient.User.cs" />
     <Compile Include="MumbleClient.Version.cs" />
     <Compile Include="MumbleProto.cs" />
     <Compile Include="PacketType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
